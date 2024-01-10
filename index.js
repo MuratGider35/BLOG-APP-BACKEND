@@ -16,4 +16,7 @@ app.all("/", (req, res) => {
     message: "welcome to blog app server",
   });
 });
+
+app.use(require('./src/middlewares/errrorHandler'))
+//Run Server
 app.listen(PORT, HOST, () => console.log(`http://${HOST}:${PORT}`));
